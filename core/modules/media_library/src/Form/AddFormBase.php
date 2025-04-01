@@ -2,6 +2,7 @@
 
 namespace Drupal\media_library\Form;
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\CloseDialogCommand;
 use Drupal\Core\Ajax\FocusFirstCommand;
@@ -257,6 +258,7 @@ abstract class AddFormBase extends FormBase implements BaseFormIdInterface, Trus
    * @param string $add_form_mode
    *   The machine name of the form mode valid for all media types enabled
    *   on a specific field (defined in widget).
+   *
    * @return array
    *   The element containing the required fields sub-form.
    */
@@ -325,6 +327,7 @@ abstract class AddFormBase extends FormBase implements BaseFormIdInterface, Trus
     }
 
     $form_display = EntityFormDisplay::collectRenderDisplay($media, $add_form_mode);
+
     // When the name is not added to the form as an editable field, output
     // the name as a fixed element to confirm the right file was uploaded.
     if (!$form_display->getComponent('name')) {

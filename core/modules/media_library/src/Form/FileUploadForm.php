@@ -258,12 +258,12 @@ class FileUploadForm extends AddFormBase {
   }
 
   /**
-  * Build the sub form for media entities, but modify base to slim it down.
-  *
-  * @see hideExtraSourceFieldComponents()
-  *
-  * {@inheritdoc}
-  */
+   * Build the sub form for media entities, but modify base to slim it down.
+   *
+   * @see hideExtraSourceFieldComponents()
+   *
+   * {@inheritdoc}
+   */
   protected function buildEntityFormElement(MediaInterface $media, array $form, FormStateInterface $form_state, int $delta, string $add_form_mode = 'media_library'): array {
     $element = parent::buildEntityFormElement($media, $form, $form_state, $delta, $add_form_mode);
 
@@ -280,7 +280,7 @@ class FileUploadForm extends AddFormBase {
    *
    * Removes the remove_button, preview, title, description and filename
    * elements from the form.
-   * 
+   *
    * @param array $element
    *   The entity form source field element.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
